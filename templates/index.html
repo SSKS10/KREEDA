@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Kreeda Sports Coaching - Login
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+ </head>		
+ <div id="header">
+ </div>
+ <body class="bg-gray-100 flex flex-col min-h-screen">
+  <header class="bg-gray-900 text-white">
+   <div class="container mx-auto flex justify-between items-center py-4 px-6">
+    <div class="flex items-center">
+     <img alt="Kreeda Logo" class="h-10 w-10" height="50" src="https://storage.googleapis.com/a1aa/image/8twu9ZiMM87ROprHnzVQNctVzqlW1PRriGfg0eqO6cOoIVAUA.jpg" width="50"/>
+     <span class="ml-3 text-2xl font-bold">
+      KREEDA
+     </span>
+    </div>
+    <nav class="hidden md:flex space-x-6">
+     <a class="hover:text-blue-500" href="home.html">
+      Home
+     </a>
+     <a class="hover:text-blue-500" href="#">
+      Coaching Videos
+     </a>
+     <a class="hover:text-blue-500" href="find_centres.html">
+      Kreeda Centres
+     </a>
+     <a class="hover:text-blue-500" href="#">
+      Membership
+     </a>
+     <a class="hover:text-blue-500" href="#">
+      Contact
+     </a>
+    </nav>
+    <div class="hidden md:flex space-x-4">
+     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="openLoginPage()">
+      Login
+     </button>
+     <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded" onclick="openLoginPage()">
+      Sign Up
+     </button>
+    </div>
+   </div>
+  </header>
+  <main class="relative flex-grow overflow-auto">
+   <img alt="Sports Coaching Background" class="w-full object-cover" height="50%" id="background-image" src="../images/changing_image_1.jpg" width="100%"/>
+   <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white">
+    <h1 class="text-5xl font-bold">
+     KREEDA
+    </h1>
+    <p class="text-xl mt-2">
+     Sports Coaching Hub
+    </p>
+    <div class="mt-6 space-x-4">
+     <button class="bg-white text-black font-bold py-2 px-6 rounded">
+      Home
+     </button>
+     <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-6 rounded">
+      Sign Us
+     </button>
+    </div>
+   </div>
+  </main>
+  <footer class="bg-gray-900 text-white py-6">
+   <div class="container mx-auto flex justify-around">
+    <div class="text-center">
+     <img alt="Home Icon" class="mx-auto mb-2 h-24 w-24" height="100" src="https://storage.googleapis.com/a1aa/image/jhXnsU3fBwQmQ6ETX0mubefYJDtF1NUv6OhjvP1GH0CTRqAoA.jpg" width="100"/>
+     <p>
+      Home
+     </p>
+    </div>
+    <div class="text-center">
+     <img alt="Coaching Videos Icon" class="mx-auto mb-2 h-24 w-24" height="100" src="https://storage.googleapis.com/a1aa/image/7iEdL60lmf2ezUmGbeWsQx8ZXzgx63M2bbNVeeGzTqehISFAF.jpg" width="100"/>
+     <p>
+      Coaching Videos
+     </p>
+    </div>
+    <div class="text-center">
+     <img alt="Find Centres Icon" class="mx-auto mb-2 h-24 w-24" height="100" src="https://storage.googleapis.com/a1aa/image/Vzj45548weydOaeNhdZegejYxZURy9Bm9UoH9wR5YPaRiUBQB.jpg" width="100"/>
+     <p>
+      Find Centres
+     </p>
+    </div>
+    <div class="text-center">
+     <img alt="About Us Icon" class="mx-auto mb-2 h-24 w-24" height="100" src="https://storage.googleapis.com/a1aa/image/jrkQXAuS9SadF5wKfbOgwDGF44RaDpwLwSha2vw2PeMmIVAUA.jpg" width="100"/>
+     <p>
+      About Us
+     </p>
+    </div>
+    <div class="text-center">
+     <img alt="Contact Us Icon" class="mx-auto mb-2 h-24 w-24" height="100" src="https://storage.googleapis.com/a1aa/image/uDBoEuYfsA0fD01sgtYpm7WgXPbhIhghZ2ioKGpaQljrIVAUA.jpg" width="100"/>
+     <p>
+      Contact Us
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script>
+    const images = [
+        "../images/changing_image_1.jpg",
+        "../images/changing_image_2.jpg",
+	"../images/changing_image_3.jpg"
+    ];
+    let currentIndex = 0;
+
+    function changeImage() {
+        const imgElement = document.getElementById('background-image');
+        currentIndex = (currentIndex + 1) % images.length;
+        imgElement.src = images[currentIndex];
+    }
+
+    setInterval(changeImage, 5000); // Change image every 3 seconds
+
+    function openLoginPage() {
+        window.location.href = "login.html";
+    }
+
+
+
+  </script>
+ </body>
+</html>
